@@ -389,29 +389,27 @@
                             Body: Body
                                 }).then(
                                     message =>{
+                                      										
                                         if(message=='OK'){
-						document.getElementById("afterMsg").style.display="block";
-						document.getElementById("afterMsg").innerText="Thanks! For submitting";
-						setInterval(()=>{
+                                        alert('Your mail has been send. Thank you for connecting.');
+                                        }
+                                        else{
+                                            console.error (message);
+                                            alert('There is error at sending message. ')
+                                            setInterval(()=>{
 							location.reload();
 						},1000)
-						//alert('Your mail has been send. Thank you for connecting.');
-					}
-					else{
-						console.error (message);
-						alert('There is error at sending message. ')
-						
-					}
+                                        }
+                    
+                                    }
+                                );
+                    
+                    
+                    
+                            }
+                    
+                     </script>
 
-				}
-			);
-
-
-
-		}
-
-
-    </script>
                                         
 </body>
 
