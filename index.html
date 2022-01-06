@@ -389,25 +389,30 @@
                             Body: Body
                                 }).then(
                                     message =>{
-                                        //console.log (message);
                                         if(message=='OK'){
-                                        alert('Your mail has been send. Thank you for connecting.');
-                                        }
-                                        else{
-                                            console.error (message);
-                                            alert('There is error at sending message. ')
-                                            
-                                        }
-                    
-                                    }
-                                );
-                    
-                    
-                    
-                            }
-                    
-                     </script>
+						document.getElementById("afterMsg").style.display="block";
+						document.getElementById("afterMsg").innerText="Thanks! For submitting";
+						setInterval(()=>{
+							location.reload();
+						},1000)
+						//alert('Your mail has been send. Thank you for connecting.');
+					}
+					else{
+						console.error (message);
+						alert('There is error at sending message. ')
+						
+					}
 
+				}
+			);
+
+
+
+		}
+
+
+    </script>
+                                        
 </body>
 
 </html>
