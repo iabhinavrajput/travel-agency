@@ -9,6 +9,8 @@
                 <title>Travel-agency</title>
                 <link rel="stylesheet" href="css/style.css">
                 <link rel="icon" href="https://bit.ly/30a0xs9" type="image/icon type">
+                <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
                
                 
 
@@ -44,7 +46,7 @@
                     </div>
                 </div>
             </center>
-            <div class="nav-text ">
+            <div class="nav-text " data-aos="flip-left">
                 <div class="nav-text1 center">
                     <h1>Planing Trip To Anywhere In The India?</h1>
                 </div>
@@ -95,12 +97,12 @@
 
             <section id="zero">
         <main>
-            <div class="destination">
+            <div class="destination" data-aos="zoom-in-up">
                 <div class="des-heading">
                    <h2>Most Popular Destination</h2>
                     <p>The main objective of the text is to awaken or encourage the reader’s desire to go on vacation. When an article is professionally written, the reader feels well-informed as well as entertained</p>
                 </div>
-                <div class="des-card">
+                <div class="des-card" data-aos="flip-left">
                     <div class="des-card1">
                         <div class="des-card-img">
                             <img src="images/des_01.jpg" alt="">
@@ -112,7 +114,7 @@
                             <button>Shedule a Trip</button>
                         </div>
                     </div>
-                    <div class="des-card1">
+                    <div class="des-card1" >
                         <div class="des-card-img">
                             <img src="images/des_02.jpg" alt="">
                         </div>
@@ -133,7 +135,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="des-card">
+                <div class="des-card" data-aos="flip-down">
                     <div class="des-card1">
                         <div class="des-card-img">
                             <img src="images/des_04.jpg" alt="">
@@ -174,13 +176,13 @@
     </main>
             </section>
         <!---------------hotel------------->
-        <section id="one">
-                        <div class="hotel-header center">
+                            <section id="one">
+                        <div class="hotel-header center" data-aos="zoom-in-up">
                        <div class="hotel-txt center">
                            <h2>Most Popular Hotels</h2>
                            <p>A hotel is an establishment that provides paid lodging on a short-term basis. ... Hotel rooms are usually numbered (or named in some smaller hotels and B&Bs) to allow guests to identify their room. Some boutique, high-end hotels have custom decorated rooms. Some hotels offer meals as part of a room and board arrangement.</p>
                        </div>
-                       <div class="hotel-container center">
+                       <div class="hotel-container center" >
                            <div class="hotel-box center ">
                                <div class="hotel-image">
                                    <img src="https://bit.ly/2YS4ots" style="width: 100%;" alt="">
@@ -235,7 +237,7 @@
 
             <!------------Pricing-------------->
             <section id="two">
-            <div id="price">
+            <div id="price" >
                 <div class="price-content center">
                     <h1>Our Popular Plans</h1>
 
@@ -350,7 +352,7 @@
                             
                                 </form>
                             </div>
-                            <div class="con-row2">
+                            <div class="con-row2" data-aos="flip-right">
                                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3490.4831187980676!2d77.63881451459439!3d28.973051675339242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390c668fdea4d87f%3A0x8795def814a486e7!2sMIET%20College!5e0!3m2!1sen!2sin!4v1632031357891!5m2!1sen!2sin"
                                     style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                             </div>
@@ -368,6 +370,10 @@
                     <script src="https://kit.fontawesome.com/7847165dd9.js" crossorigin="anonymous"></script>
                     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> 
                     <script src="https://smtpjs.com/v3/smtp.js"></script>
+                    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+                    <script>
+                        AOS.init();
+                      </script>
                      
                     <script>  
                     
@@ -389,16 +395,14 @@
                             Body: Body
                                 }).then(
                                     message =>{
-                                      										
+                                        //console.log (message);
                                         if(message=='OK'){
                                         alert('Your mail has been send. Thank you for connecting.');
                                         }
                                         else{
                                             console.error (message);
                                             alert('There is error at sending message. ')
-                                            setInterval(()=>{
-							location.reload();
-						},1000)
+                                            
                                         }
                     
                                     }
@@ -410,7 +414,6 @@
                     
                      </script>
 
-                                        
 </body>
 
 </html>
