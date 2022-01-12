@@ -398,6 +398,9 @@
                                         //console.log (message);
                                         if(message=='OK'){
                                         alert('Your mail has been send. Thank you for connecting.');
+                                        setInterval(()=>{
+							            location.reload();
+						                },1000)
                                         }
                                         else{
                                             console.error (message);
